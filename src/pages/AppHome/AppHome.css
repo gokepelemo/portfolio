@@ -1,0 +1,32 @@
+.portfolioIntro {
+  font-weight: 400;
+  font-size: 5vmin;
+  width: fit-content;
+  padding: 2vmin;
+}
+
+.navFont {
+  font-size: 5vmin;
+  color: #317ec4;
+}
+
+.portfolioIntro a {
+  text-decoration: none;
+}
+
+.portfolioStart a {
+  padding: 1vmin;
+}
+
+.portfolioStart a:hover {
+  border-radius: 5%;
+  background-color: #CCC;
+  width: fit-content;
+  transition: all 1s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  .porfolioIntro {
+    font-size: 32px;
+  }
+}

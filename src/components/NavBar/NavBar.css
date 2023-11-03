@@ -1,0 +1,28 @@
+.purpose, .nav-item>a {
+    text-transform: lowercase;
+    font-size: 20px;
+}
+
+.nav-item>a {
+    color: #317EC4;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.appHeader .brand {
+    text-transform: uppercase;
+}
+
+.appHeader .brand {
+    font-size: 2rem;
+}
+
+.logo {
+    margin: 0.6rem;
+}
+
+.nav-link {
+    margin-top: 0.5rem;
+}
