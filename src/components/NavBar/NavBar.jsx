@@ -11,7 +11,7 @@ export default function NavBar({ portfolioData }) {
   return (
     <header className="appHeader">
       <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
+        <Container fluid>
           <NavLink to="/" className="brand">
             <Navbar.Brand className="brand">
               <img
@@ -79,6 +79,15 @@ export default function NavBar({ portfolioData }) {
                   </NavDropdown>
                 );
               })}
+              <div className="nav-item">
+                <Nav.Link
+                  href={`https://gokepelemo.com/`}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Blog
+                </Nav.Link>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>
