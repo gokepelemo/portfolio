@@ -1,5 +1,6 @@
 import slugify from "slugify";
 import "./PortfolioCategory.css";
+import Stack from "react-bootstrap/Stack";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useParams, Link } from "react-router-dom";
 
@@ -9,6 +10,7 @@ export default function PortfolioCategory({ portfolio }) {
     .map((item, index) => [slugify(item.toLowerCase().replace(" ", "")), index])
     .filter((item) => portfolioCategory === item[0])[0][1];
   const portfolioData = Object.values(portfolio)[portfolioIdx];
+  document.title = `${Object.keys(portfolio)[portfolioIdx]} | Portfolio - Goke Pelemo`
   return (
     <div>
       <div className="row mx-2 mb-5">
@@ -53,7 +55,7 @@ export default function PortfolioCategory({ portfolio }) {
                       </p>
                     )}
                     {portfolioCategory !== "others" && (
-                      <nav className="nav nav-underline">
+                      <Stack direction="horizontal" gap={3}>
                         <Link
                           to={item.repository}
                           target="_blank"
@@ -70,10 +72,10 @@ export default function PortfolioCategory({ portfolio }) {
                         >
                           Application
                         </Link>
-                      </nav>
+                      </Stack>
                     )}
                     {item.otherlinks && (
-                      <nav className="nav nav-underline">
+                      <Stack direction="horizontal" gap={3}>
                         {item.otherlinks.map((link, index) => {
                           return (
                             <Link
@@ -88,7 +90,7 @@ export default function PortfolioCategory({ portfolio }) {
                                 width="16"
                                 height="16"
                                 fill="currentColor"
-                                className="bi bi-box-arrow-up-right"
+                                className="bi bi-box-arrow-up-right me-1"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -99,12 +101,13 @@ export default function PortfolioCategory({ portfolio }) {
                                   fillRule="evenodd"
                                   d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
                                 />
-                              </svg>{"  "}
+                              </svg>
+                              {"  "}
                               {link.name}
                             </Link>
                           );
                         })}
-                      </nav>
+                      </Stack>
                     )}
                   </div>
                 </ListGroup.Item>

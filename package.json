@@ -23,6 +23,8 @@
     "slugify": "^1.6.6"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,5 +48,9 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "babel-preset-react-app": "@babel/plugin-proposal-private-property-in-object"
+  }
 }

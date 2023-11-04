@@ -12,6 +12,7 @@ export default function PortfolioItem({ portfolio }) {
   const portfolioData = Object.values(portfolio)[portfolioIdx].filter(
     (item) => slugify(item.name.toString().toLowerCase()) === portfolioId
   )[0];
+  document.title = `${portfolioData.name} (${Object.keys(portfolio)[portfolioIdx]}) | Portfolio - Goke Pelemo`
   return (
     <div>
       <div className="row mx-2 mb-5">
@@ -25,11 +26,6 @@ export default function PortfolioItem({ portfolio }) {
                 screenshot
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-        <Nav.Link eventKey="2" title="Item">
-          readme
-        </Nav.Link>
-      </Nav.Item>
           </Nav>
         </div>
       </div>
@@ -42,17 +38,17 @@ export default function PortfolioItem({ portfolio }) {
       </div>
       <div className="row mx-2 mb-5 d-flex">
         <div className="col-md-6 p-5">
-          <h3 className="align-items-center justify-content-center d-flex mb-3">Technologies Used</h3>
+          <h3 className="mb-3">Technologies Used</h3>
           <ListGroup>
           {portfolioData.technologies.map(technology => <ListGroup.Item>{technology}</ListGroup.Item>)}
           </ListGroup>
           </div>
         <div className="col-md-6 p-5">
-          <h3 className=" align-items-center justify-content-center d-flex mb-3">Description/Links</h3>
+          <h3 className="mb-3">Description</h3>
           <Stack gap={3}>
             <p>{portfolioData.description}</p>
-            <Link to={portfolioData.link}>Application</Link>
-            <Link to={portfolioData.repository}>Git Repository</Link>
+            {portfolioData.link && <Link to={portfolioData.link}>Application</Link>}
+            {portfolioData.repository && <Link to={portfolioData.repository}>Git Repository</Link>}
           </Stack>
           </div>
       </div>

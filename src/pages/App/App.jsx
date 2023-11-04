@@ -36,6 +36,15 @@ const portfolioData = {
       image: "https://i.imgur.com/734vJfl.gif",
       technologies: ["HTML", "CSS", "Javascript"],
     },
+    {
+      name: "Personal Portfolio",
+      link: "https://portfolio.gokepelemo.com/",
+      repository: "https://github.com/gokepelemo/portfolio",
+      readme: "https://raw.githubusercontent.com/gokepelemo/portfolio/main/README.md",
+      description: "This portfolio site is also a single-page application built using a MERN stack.",
+      image: "https://i.imgur.com/anRgxel.png",
+      technologies: ["HTML", "CSS", "Bootstrap", "React"],
+    },
   ],
   "Full Stack": [
     {
@@ -55,16 +64,7 @@ const portfolioData = {
       description: "Notes and Things enables you to create a list of published books and track your progress reading those books with friends, communities and book clubs. You and any member can like and add notes to books, then share the book or reading list on social media.",
       image: "https://raw.githubusercontent.com/gokepelemo/notes-and-things/main/screenshots/add-to-reading-list.gif",
       technologies: ["HTML", "CSS", "Express/Node.js", "jQuery", "Bootstrap"],
-    },
-    {
-      name: "Personal Portfolio",
-      link: "https://portfolio.gokepelemo.com/",
-      repository: "https://github.com/gokepelemo/portfolio",
-      readme: "https://raw.githubusercontent.com/gokepelemo/portfolio/main/README.md",
-      description: "This portfolio site is also a single-page application built using a MERN stack.",
-      image: "https://i.imgur.com/anRgxel.png",
-      technologies: ["HTML", "CSS", "Bootstrap", "React", "Express/Node.js", "MongoDB"],
-    },
+    }
   ],
   Others: [
     {
