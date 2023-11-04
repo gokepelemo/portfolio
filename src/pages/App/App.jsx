@@ -41,7 +41,7 @@ const portfolioData = {
       link: "https://portfolio.gokepelemo.com/",
       repository: "https://github.com/gokepelemo/portfolio",
       readme: "https://raw.githubusercontent.com/gokepelemo/portfolio/main/README.md",
-      description: "This portfolio site is also a single-page application built using a MERN stack.",
+      description: "This portfolio site is also a single-page application built using React and Bootstrap.",
       image: "https://i.imgur.com/anRgxel.png",
       technologies: ["HTML", "CSS", "Bootstrap", "React"],
     },
