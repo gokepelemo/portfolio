@@ -40,7 +40,7 @@ export default function PortfolioItem({ portfolio }) {
         <div className="col-md-6 p-5">
           <h3 className="mb-3">Technologies Used</h3>
           <ListGroup>
-          {portfolioData.technologies.map(technology => <ListGroup.Item>{technology}</ListGroup.Item>)}
+          {portfolioData.technologies.map((technology,index) => <ListGroup.Item key={index}>{technology}</ListGroup.Item>)}
           </ListGroup>
           </div>
         <div className="col-md-6 p-5">

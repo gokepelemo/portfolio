@@ -21,14 +21,14 @@ export default function PortfolioCategory({ portfolio }) {
               return (
                 <ListGroup.Item
                   key={index}
-                  className="list-group-item d-flex p-3"
+                  className="list-group-item d-flex p-3 portfolioItem"
                 >
                   {portfolioCategory !== "others" && (
-                    <div className="col-md-5">
+                    <div className="col-md-5 imgContainer">
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="portfolioImg img-fluid "
+                        className="portfolioImg img-fluid"
                       />
                     </div>
                   )}

@@ -8,9 +8,12 @@
     h2 {
         text-align: center;
     }
-    .portfolioImg {
-        padding: 3vmin;
-        max-width: 25vmin;
-        width: 25vmin;
+    .imgContainer {
+        display: none;
+    }
+    .portfolioItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
