@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 1200px) {
-    h2 {
+    h2, h3 {
         text-align: center;
     }
     .imgContainer {
