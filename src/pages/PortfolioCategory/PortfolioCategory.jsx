@@ -48,32 +48,6 @@ export default function PortfolioCategory({ portfolio }) {
                       <span className="display-6 fw-medium">{item.name}</span>
                     </Link>
                     <p className="my-3">{item.description}</p>
-                    {item.technologies && (
-                      <p className="my-3">
-                        <strong>Technologies Used</strong>:{" "}
-                        {item.technologies.join(", ")}
-                      </p>
-                    )}
-                    {portfolioCategory !== "others" && (
-                      <Stack direction="horizontal" gap={3}>
-                        <Link
-                          to={item.repository}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="nav-link lead fw-normal link-underline link-underline-opacity-25-hover link-underline-opacity-0"
-                        >
-                          Git Repository
-                        </Link>
-                        <Link
-                          to={item.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="nav-link lead fw-normal link-underline link-underline-opacity-25-hover link-underline-opacity-0"
-                        >
-                          Application
-                        </Link>
-                      </Stack>
-                    )}
                     {item.otherlinks && (
                       <Stack direction="horizontal" gap={3}>
                         {item.otherlinks.map((link, index) => {
