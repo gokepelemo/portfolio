@@ -26,3 +26,8 @@
 .nav-link {
     margin-top: 0.5rem;
 }
+
+a.dropdown-item>a, a.brand {
+    text-decoration: none;
+    color: black;
+}

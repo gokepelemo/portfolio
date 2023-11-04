@@ -1,29 +1,60 @@
-import './AppHome.css';
-import { Link } from 'react-router-dom'
+import "./AppHome.css";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-export default function AppHome() {
-    document.title = 'Portfolio - Goke Pelemo'
+export default function AppHome({ homeBlurb }) {
+  document.title = "Portfolio - Goke Pelemo";
+  const [blurb, setBlurb] = useState([]);
+  async function updateText() {
+    let tmpArr = [...blurb];
+    function updateArr(arr, index) {
+      tmpArr.push(arr[index]);
+      setBlurb([...tmpArr]);
+    }
+    homeBlurb.forEach((text, index, arr) => {
+      updateArr(arr, index);
+    });
+  }
+  useEffect(() => {
+    updateText();
+  }, []);
   return (
     <>
       <div className="row mx-2 mb-5">
         <div className="col-md-12 p-5">
-            <p className="portfolioIntro h1">
-                In a small world of many wonders.
-            </p>
-            <p className="portfolioIntro h1">
-                A fresh code wrangler ready to build prototypes and create experimental products.
-            </p>
-            <p className="portfolioIntro h1">
-                I attended General Assembly's SEI program from August to November 2023.
-            </p>
-            <p className="portfolioIntro h1">
-                Here are a few projects that I've worked on.
-            </p>
-            <p className="portfolioIntro portfolioStart h1">
-            <Link to="/">
-                ❤️ <span className="navFont">→</span>
-            </Link>
-            </p>
+          {blurb.map((text, index) => {
+            let textArr = text.deconstructed ? text.text.split(" ") : [];
+            textArr = textArr.map((textDeconstruct, index, arr) => {
+              return index + 1 === arr.length ? (
+                text.link.internal ? (
+                  <Link to={text.link.url} key={index}>
+                    <span className={text.classes[index]}>
+                      {textDeconstruct}
+                    </span>
+                  </Link>
+                ) : (
+                  <a
+                    href={text.link.url}
+                    target="portfolio"
+                    rel="noreferrer"
+                    title={textDeconstruct}
+                    key={index}
+                  >
+                    <span className={text.classes[index]}>
+                      {textDeconstruct}
+                    </span>
+                  </a>
+                )
+              ) : (
+                <span className={text.classes[index]} key={index}>{textDeconstruct}</span>
+              );
+            });
+            return !text.deconstructed ? (
+              <p className="portfolioIntro h1" key={index}>{text.text}</p>
+            ) : (
+              <p className="portfolioIntro portfolioStart h1" key={index}>{textArr}</p>
+            );
+          })}
         </div>
       </div>
     </>

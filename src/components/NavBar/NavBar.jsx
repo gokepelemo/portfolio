@@ -4,24 +4,26 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { useState } from "react";
 import slugify from "slugify";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar({ portfolioData }) {
   return (
     <header className="appHeader">
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="/" className="brand">
-            <img
-              alt=""
-              src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top logo"
-            />{" "}
-            Goke Pelemo <span className="purpose">portfolio</span>
-          </Navbar.Brand>
+          <NavLink to="/" className="brand">
+            <Navbar.Brand className="brand">
+              <img
+                alt=""
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top logo"
+              />{" "}
+              Goke Pelemo <span className="purpose">portfolio</span>
+            </Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -32,23 +34,45 @@ export default function NavBar({ portfolioData }) {
                     id="basic-nav-dropdown"
                     key={index}
                   >
+                    <NavLink
+                      to={`${portfolioCategory.replace(" ", "").toLowerCase()}`}
+                      className="dropdown-item"
+                      role="button"
+                      tabIndex="0"
+                      data-rr-ui-dropdown-item
+                    >
+                      {portfolioCategory}
+                    </NavLink>
+                    <NavDropdown.Divider />
                     {Object.values(portfolioData[portfolioCategory]).map(
                       (item, index) => {
                         return portfolioCategory !== "Others" ? (
-                          <NavDropdown.Item
+                          <NavLink
+                            data-rr-ui-dropdown-item
+                            className="dropdown-item"
+                            role="button"
+                            tabIndex="0"
                             key={index}
-                            href={`/${portfolioCategory
+                            to={`/${portfolioCategory
                               .replace(" ", "")
                               .toLowerCase()}/${slugify(
                               item.name.toLowerCase()
                             )}`}
                           >
                             {item.name}
-                          </NavDropdown.Item>
+                          </NavLink>
                         ) : (
-                          <NavDropdown.Item key={index} href={item.link}>
+                          <NavLink
+                            data-rr-ui-dropdown-item
+                            className="dropdown-item"
+                            role="button"
+                            tabIndex="0"
+                            key={index}
+                            to={item.link}
+                            target="_blank"
+                          >
                             {item.name}
-                          </NavDropdown.Item>
+                          </NavLink>
                         );
                       }
                     )}

@@ -1,6 +1,6 @@
 .portfolioIntro {
   font-weight: 400;
-  font-size: 5vmin;
+  font-size: 4.5vmin;
   width: fit-content;
   padding: 2vmin;
 }
@@ -22,6 +22,7 @@
   border-radius: 5%;
   background-color: #CCC;
   width: fit-content;
+  margin: 0 2vmin;
   transition: all 1s ease-in-out;
 }
 
