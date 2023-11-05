@@ -50,7 +50,6 @@
   },
   "proxy": "http://localhost:3001",
   "devDependencies": {
-    "gh-pages": "^6.0.0",
-    "babel-preset-react-app": "@babel/plugin-proposal-private-property-in-object"
+    "gh-pages": "^6.0.0"
   }
 }
