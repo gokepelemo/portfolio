@@ -30,7 +30,7 @@ export default function NavBar({ portfolioData }) {
               {Object.keys(portfolioData).map((portfolioCategory, index) => {
                 return (
                   <NavDropdown
-                    title={portfolioCategory}
+                    title={portfolioCategory.replace(" ","")}
                     id="basic-nav-dropdown"
                     key={index}
                   >
@@ -84,6 +84,7 @@ export default function NavBar({ portfolioData }) {
                   href={`https://gokepelemo.com/`}
                   role="button"
                   tabIndex="0"
+                  target="_blank"
                 >
                   Blog
                 </Nav.Link>
