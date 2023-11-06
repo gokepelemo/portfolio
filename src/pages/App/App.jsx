@@ -10,7 +10,7 @@ const portfolioData = {
   Frontend: [
     {
       name: "Mancala",
-      link: "https://gokepelemo.github.io/mancala/",
+      link: "https://mancala.goke.tech",
       repository: "https://github.com/gokepelemo/mancala",
       readme: "https://raw.githubusercontent.com/gokepelemo/mancala/main/README.md",
       description:
@@ -20,7 +20,7 @@ const portfolioData = {
     },
     {
       name: "Tic-Tac-Toe",
-      link: "https://gokepelemo.github.io/tic-tac-toe/",
+      link: "https://tictactoe.goke.tech",
       repository: "https://github.com/gokepelemo/tic-tac-toe",
       readme: "https://raw.githubusercontent.com/gokepelemo/tic-tac-toe/main/README.md",
       description: "An online adaptation of the well-known X/O tabletop game, enjoyed in various cultures. It's a simple 2-player game created in Javascript, one of the early exercises in General Assembly's curriculum. I also have a Python-based CLI version on my Replit profile and a React-based version on Code Sandbox.",
@@ -29,7 +29,7 @@ const portfolioData = {
     },
     {
       name: "Connect Four",
-      link: "https://gokepelemo.github.io/connect-four/",
+      link: "https://connectfour.goke.tech",
       repository: "https://github.com/gokepelemo/connect-four",
       readme: "https://raw.githubusercontent.com/gokepelemo/connect-four/main/README.md",
       description: "An online adaptation of the classic party game, Connect Four, primarily developed for practicing DOM manipulation in Javascript, with less emphasis on gameplay experience.",
