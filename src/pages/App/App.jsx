@@ -49,7 +49,7 @@ const portfolioData = {
   "Full Stack": [
     {
       name: "Biensperience",
-      link: "https://biensperience.onrender.com/",
+      link: "https://biensperience.goke.tech/",
       repository: "https://github.com/gokepelemo/biensperience",
       readme: "https://raw.githubusercontent.com/gokepelemo/biensperience/main/README.md",
       description: "An application that enables you to plan your experiences and share experience plans with other users. When you plan a trip, vacation, or adventure with your loved ones, you get to create a plan in that experience and mark items done as you finalize the plan. The same plan becomes available for others to plan similar experiences.",
@@ -58,7 +58,7 @@ const portfolioData = {
     },
     {
       name: "Notes and Things",
-      link: "https://notes-and-things.onrender.com/",
+      link: "https://notesandthings.goke.tech/",
       repository: "https://github.com/gokepelemo/notes-and-things",
       readme: "https://raw.githubusercontent.com/gokepelemo/notes-and-things/main/README.md",
       description: "Notes and Things enables you to create a list of published books and track your progress reading those books with friends, communities and book clubs. You and any member can like and add notes to books, then share the book or reading list on social media.",
